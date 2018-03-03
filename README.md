@@ -1,6 +1,24 @@
-frontend-nanodegree-arcade-game
-===============================
+# Front End Object Oriented Arcade Game
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## How To Play:
+1. Once loading the page, the game will immediately start.
+2. Use your arrow keys on the keyboard to move the player from the grass to the water.
+3. Each time you reach the water, you will gain a point... but be careful, when a vehicle hits you, you will lose all your points and start over.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+* The goal of the game is to receive your highest score.
+
+## Future Improvement To Game:
+- Character Selection Option
+- Timer Added To Game
+- Gems and collectables added to game
+- Obstacles to make the game harder
+- Level difficulty selection option
+- Player customization to the game board layout in order to customize the length of the road, etc.
+
+## Contribution
+Want to contribute?
+Please submit a issue ticket and we can begin from there.
+
+### Contributors
+Jonathan Deleon
+February 2018 
