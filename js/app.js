@@ -58,7 +58,7 @@ class Player {
   update(direction){
     switch(direction){
       case 'left':
-        console.log(this.x);
+        //console.log(this.x);
         if(this.x - 50 > 0){
           this.x -= 50;
           return this.x;
@@ -69,7 +69,7 @@ class Player {
           break;
         }
       case 'up':
-      console.log(this.y);
+      //console.log(this.y);
 
         if(this.y - 50 >= 0){
           this.y -= 50;
@@ -80,7 +80,7 @@ class Player {
           //Update Score
           document.querySelector('#score').textContent = Number(document.querySelector('#score').textContent)+1;
 
-          //Updates Best Score 
+          //Updates Best Score
           if(Number(document.querySelector('#score').textContent) > Number(document.querySelector('#best_score').textContent)){
             document.querySelector('#best_score').textContent = document.querySelector('#score').textContent;
           }
@@ -91,7 +91,7 @@ class Player {
           break;
         }
       case 'right':
-        console.log(this.x);
+        //console.log(this.x);
 
         if(this.x + 50 < 450){
           this.x += 50;
@@ -103,7 +103,7 @@ class Player {
           break;
         }
       case 'down':
-      console.log(this.y);
+      //console.log(this.y);
 
         if(this.y + 50 > 450){
           return this.y;
@@ -143,7 +143,7 @@ class Player {
 // Now instantiate your objects.
 // Place the player object in a variable called player
 let player = new Player();
-console.log(player);
+//console.log(player);
 
 
 // Place all enemy objects in an array called allEnemies
