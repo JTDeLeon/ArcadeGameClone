@@ -3,15 +3,14 @@ var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     this.x = 1;
-    // this.y = (Math.floor(Math.random() * 200) + 50);
     this.y = (Math.floor(Math.random() * 3)*100)+50;
-    //X Returns 50, 150, 250
+
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
 
-    // this.speed = Math.floor(Math.random() * 100) + 50;
+    //Setting speed to random variable
     this.speed = (Math.floor(Math.random() * 10)+10)*10;
 };
 
@@ -21,7 +20,8 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    // console.log(this.x + " : " + this.y);
+
+    //Loops the enemy to the beginning if they hit the end
     if(this.x > 450){
       this.x = 1;
     }else{
@@ -55,22 +55,19 @@ class Player {
   // This class requires an update(), render() and
   // a handleInput() method.
 
+  //Updates on the direction passed into the function update from the user event
   update(direction){
     switch(direction){
       case 'left':
-        //console.log(this.x);
         if(this.x - 50 > 0){
           this.x -= 50;
           return this.x;
           break;
         }else{
-          //this.x = (this.x - 50)+450;
           return this.x;
           break;
         }
       case 'up':
-      //console.log(this.y);
-
         if(this.y - 50 >= 0){
           this.y -= 50;
           return this.y;
@@ -91,20 +88,15 @@ class Player {
           break;
         }
       case 'right':
-        //console.log(this.x);
-
         if(this.x + 50 < 450){
           this.x += 50;
           return this.x;
           break;
         }else{
-          //this.x = (this.x + 50)-450;
           return this.x;
           break;
         }
       case 'down':
-      //console.log(this.y);
-
         if(this.y + 50 > 450){
           return this.y;
           break;
@@ -116,10 +108,12 @@ class Player {
     }
   }
 
+  //Draws image
   render() {
       ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 
+  //Takes in the key logged and passes to update function
   handleInput(key){
     switch(key){
       case 'left':
